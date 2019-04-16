@@ -1,0 +1,192 @@
+<div id="home" >
+	<ng-include src="'views/shared/nav-menu.html'" scope="" onload=""></ng-include>
+	<div>
+		<div style="height:68px;"></div>
+		<div class="section home-top">
+			<!-- <center> -->
+				<img src="./images/home-background-md.jpg" alt="bg" class="img-responsive">
+			<!-- </center> -->
+			<div class="content">
+				<center>
+					<h1 class="text-accent">ค้นหาสถานที่แห่งใหม่</h1>
+					<p>เพื่อทดลองขายสินค้า ตามสถานที่ที่มีไลฟ์สไตล์<br>
+	ตรงกลุ่มเป้าหมาย ง่ายๆเพียงคลิ๊ก</p>
+				</center>
+			</div>
+		</div>
+	</div>
+	<div class="section-new hidden-xs">
+		<div class="container">
+			<center class="row">
+				เจ้าของสินค้า หรือเจ้าของสถานที่ ติดต่อหาเรา เพื่อขอคำแนะนำดีๆได้ที่ 089-764-7726
+			</center>
+		</div>
+	</div>
+	<div class="section-2">
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center">เลือกประเภทสถานที่</h1>
+				<p class="text-center">ไอเดียใหม่ๆ ในการขาย สามารถเกิดขึ้นได้ในสถานที่ที่เหมาะสม เพียงคุณหาจุด ที่จะเชื่่อมสินค้าให้เข้ากับไลฟ์สไตล์ของสถานที่แห่งนั้นให้ได้</p>
+				<br><br>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<a ng-click="go('/spaces/1')">
+								<center>
+									<div class="store-type">
+										<div class="img-wrapper">
+											<img src="./images/type-1-thumbnail-gray.jpg" class="img-responsive" alt="">
+
+											</img>
+											<div class="accent-overlay">											
+												<div class="element">
+													<center><img src="./images/icon-fashion-retail.png" alt=""></center>
+													<center>ร้านเสื้อผ้าแฟชั่น</center>
+												</div>
+											</div>
+										</div>
+
+										<!-- <div class="store-type-img" style="background-image:url('./images/type-1-thumbnail-gray.jpg')">
+											<div>
+												<div class="element">
+													<center><img src="./images/icon-fashion-retail.png" alt=""></center>
+													<center>ร้านเสื้อผ้าแฟชั่น</center>
+												</div>
+											</div>
+										</div> -->
+									</div>
+								</center>
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a ng-click="go('/spaces/2')">
+							<center>
+								<div class="store-type">
+									<div class="img-wrapper">
+										<img src="./images/type-2-thumbnail-gray.jpg" class="img-responsive" alt="">
+
+										</img>
+										<div class="accent-overlay">											
+											<div class="element">
+												<center><img src="./images/icon-restaurant.png" alt=""></center>
+												<center>ร้านอาหารและเครื่องดื่ม</center>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="store-type-img" style="background-image:url('./images/type-2-thumbnail-gray.jpg')">
+										<div>
+											<div class="element">
+												<center><img src="./images/icon-restaurant.png" alt=""></center>
+												<center>ร้านอาหารและเครื่องดื่ม</center>
+											</div>
+										</div>
+									</div> -->
+								</div>
+							</center>
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a ng-click="go('/spaces/4')">
+							<center>
+								<div class="store-type">
+									<div class="img-wrapper">
+										<img src="./images/type-4-thumbnail-gray.jpg" class="img-responsive" alt="">
+
+										</img>
+										<div class="accent-overlay">											
+											<div class="element">
+												<center><img src="./images/icon-other.png" alt=""></center>
+												<center>อื่นๆ</center>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="store-type-img" style="background-image:url('./images/type-4-thumbnail-gray.jpg')">
+										<div>
+											<div class="element">
+												<center><img src="./images/icon-other.png" alt=""></center>
+												<center>อื่นๆ</center>
+											</div>
+										</div>
+									</div> -->
+								</div>
+							</center>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-space">
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center" style="margin: 0;margin-bottom: -32px;">แนะนำสถานที่น่าสนใจ</h1>
+				<br><br>
+				<div class="container">
+					<div class="row">
+						<div ng-include src="'views/shared/store-list.html'"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="section addSpace">
+		<center>
+			<h1>คุณเป็นเจ้าของสถานที่ใช่ไหม?</h1>
+			<p class="text-black">
+				ทุกสถานที่มีโอกาสปล่อยเช่าได้ ทำไมไม่ลองจัดสรรพื้นที่ของคุณ มาให้ ShiftSpace ดูแลล่ะ?<br>
+เพียงแค่อัพโหลดรูปภาพ และข้อมูลสถานที่ โดยใช้เวลาไม่ถึง 5 นาที
+			</p>
+			<a><button id="add-space-button" class="btn btn-primary" data-toggle="modal" data-target="#addSpaceModal"><img src="./images/plus-20.png" alt=""> เพิ่มสถานที่ปล่อยเช่า</button></a>
+		</center>
+	</div>
+
+	<div class="section space-example bg-grey">
+		<center>
+			<h3>ตัวอย่างรูปแบบในการปล่อยเช่า</h3>
+		</center>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-xs-6" ng-repeat="example in spaceExamples">
+					<center>
+						<div class="wrapper">
+							<img ng-src="{{example.img}}" class="img-responsive">
+							<div class="type-name">
+								<p class="text-center"  ng-bind-html="example.name"></p>
+							</div>
+						</div>
+					</center>
+				</div>
+			</div>
+		</div>	
+
+	</div>
+	<div class="section section-success" style="padding-top:100px;padding-bottom:100px;">
+		<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<img src="./images/success-pic.jpg" alt="" class="img-responsive" style="">	
+			</div>
+			<div class="col-sm-6 story">
+				<h1>เรื่องราวน่าประทับใจ</h1>
+				<img src="./images/klandth-boy.png" alt="" style="margin-bottom:32px;">
+				<p class="text-black">หลังจากใช้ ShiftSpace ทำให้เราได้แบรนด์ BOY LONDON เข้ามาขายในร้านเคแลนด์ ซึ่งแบรนด์ BOY LONDON ทำได้ดีเลยครับ สามารถช่วยดึงคนเข้าร้านได้เยอะ อาจจะเป็นเพราะคนที่เป็นสาวก แบรนด์ BOY LONDON ในไทยมีค่อนข้างเยอะ บวกกับร้านเคแลนด์ มีความหลายหลากของสินค้าในร้านมากขึ้น ทำให้คนอยู่ในร้านได้นานขึ้น มาก และสร้างยอดขายให้กับแบรนด์อื่นในร้านได้มากขึ้นด้วยครับ</p>
+				<h5 class="text-accent" style="font-weight:400">เจ้าของร้านเคแลนด์ สยามสแควร์วัน</h5>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="section section-work">
+		<!-- <img src="./images/bg-work.jpg" alt=""> -->
+		<center>
+			<h1>สร้างความฝันของคุณให้เป็นจริง</h1>
+			<h3>ด้วยการเชื่อมแบรนด์ของคุณ กับ ShiftSpace</h3>
+			<br>
+			<h5>บริษัท ชิฟท์ สเปซ จำกัด</h5>
+		</center>
+	</div>
+
+<div ng-include src="'views/shared/backtotop.html'"></div>
+<div ng-include src="'views/shared/footer.html'"></div>
+<div ng-include src="'views/modal/popup.html'"></div>

@@ -1,0 +1,23 @@
+<h2>การแบ่งพื้นที่เพื่อ</h2>
+<ul class="radio-group">
+	<li ng-repeat="(key,value) in PurposeOfSpace">
+		<input type="radio" id="{{key}}" name="radio" ng-value="key" ng-model="space.purposeOfSpace">
+		<label for="{{key}}">{{value}}</label>
+	</li>
+	<!-- <li>
+		<input type="radio" id="radio1" name="radio" value="1" checked>
+		<label for="radio1">เพื่อปล่อยเช่า</label>
+	</li>
+	<li>
+		<input type="radio" id="radio2" name="radio" value="2">
+		<label for="radio2">เพื่อฝากขาย</label>
+	</li>
+	<li>
+		<input type="radio" id="radio3" name="radio" value="3">
+		<label for="radio3">เพื่อปล่อยเช่าพร้อมฝากขาย</label>
+	</li>
+	<li>
+		<input type="radio" id="radio4" name="radio" value="4">
+		<label for="radio4">ที่พัก</label>
+	</li> -->
+</ul>

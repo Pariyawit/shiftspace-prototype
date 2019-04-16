@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- © 2016 Shift Space Co.,LTD. -->
+    <meta charset="utf-8">
+    <title>Shiftspace</title>
+    <meta name="description" content="Find a Place to Pop-Up">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="images/shiftspace-sq.png">
+    <link rel="image_src" href="images/shiftspace-sq.png" />
+
+    <meta property="og:title"   content="Shiftspace" />
+    <meta property="og:type"    content="website" />
+    <meta property="og:description" content="Find a Place to Pop-Up" />
+    <meta property="og:url"     content="" />
+    <meta property="og:image" content="images/shiftspace-sq.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon" href="https://s3-ap-southeast-1.amazonaws.com/shiftspace.me/images/logo-jpg.jpg" />
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="bower_components/jasny-bootstrap/css/jasny-bootstrap.css" /> -->
+    <link rel="stylesheet" href="bower_components/simpleImageGallery/css/fblindSimpleImageGallery.css" />
+    <link rel="stylesheet" href="libs/dropdowns-enhancement/dropdowns-enhancement.css" />
+    <link rel="stylesheet" href="libs/ng-scrollbar/ng-scrollbar.min.css" />
+    <!-- <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" /> -->
+
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/font-prompt.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/styles.css">
+ 
+    <script type="text/javascript" src="libs/file-picker/file-picker.min.js"></script>
+   
+    <!-- endbuild -->
+    <!-- <base href="/"> -->
+
+    <!-- Start of Async Drift Code -->
+<!--
+    <script>
+
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+      t.methods = [ "identify", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+      t.factory = function(e) {
+        return function() {
+          var n;
+          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, r;
+        e = 3e5, r = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + r + "/" + t + ".js", 
+        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.2.0'
+    drift.load('m97ekfm3tana')
+    </script>
+-->
+    <!-- End of Async Drift Code -->
+    
+  </head>
+  <body ng-app="shiftspaceApp" ng-controller="MainCtrl">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+   
+    <div id="wrapper" ng-view="" autoscroll="true"></div>
+   
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+      <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-81356505-1');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+
+    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- <script src="bower_components/moment/min/moment.min.js"></script> -->
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="bower_components/jasny-bootstrap/js/jasny-bootstrap.min.js"></script> -->
+
+    <!-- <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script> -->
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script> -->
+    <script src="bower_components/simpleImageGallery/js/fblindSimpleImageGallery.js"></script>
+    <script src="libs/dropdowns-enhancement/dropdowns-enhancement.js"></script>
+    <script src="libs/checklist-model/checklist-model.js"></script>
+    <script src="libs/showErrors/showErrors.min.js"></script>
+    <script src="libs/ng-scrollbar/ng-scrollbar.min.js"></script>
+    <script src="libs/ng-map/ng-map.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    
+
+    <!-- form -->
+    <script src="form/js/tagging.min.js"></script>
+<!-- 
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCu6Q48Tjluf0oyt5Pq-iudj6nay0nvjB0"></script>
+ -->
+    <!-- <script type="text/javascript" src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script> -->
+    
+    <!-- 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+ -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.module.js"></script>
+    <script src="scripts/app.route.js"></script>
+    <script src="scripts/factory/store.js"></script>
+    <script src="scripts/factory/storeType.js"></script>
+    <script src="scripts/factory/aminity.js"></script>
+    <script src="scripts/factory/facility.js"></script>
+    <script src="scripts/factory/step.js"></script>
+    <script src="scripts/factory/demographic.js"></script>
+    <script src="scripts/factory/payment.js"></script>
+    <script src="scripts/factory/purposeOfUse.js"></script>
+    <script src="scripts/factory/purposeOfSpace.js"></script>
+    <script src="scripts/factory/suitableFor.js"></script>
+
+    <script src="scripts/services/APIService.js"></script>
+    <script src="scripts/services/Storage.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/listspace.js"></script>
+    <script src="scripts/controllers/addspace.js"></script>
+    <script src="scripts/controllers/search.js"></script>
+    <script src="scripts/controllers/space.js"></script>
+    <script src="scripts/controllers/enquiry.js"></script>
+    <script src="scripts/controllers/spaceowner.js"></script>
+    <script src="scripts/controllers/storelist.js"></script>
+    <script src="scripts/controllers/stepaddspace.js"></script>
+    <script src="scripts/controllers/addstep1.js"></script>
+    <script src="scripts/controllers/addstep2.js"></script>
+    <script src="scripts/controllers/addstep3.js"></script>
+    <script src="scripts/controllers/spacePreview.js"></script>
+    
+    <!-- endbuild -->
+</body>
+</html>

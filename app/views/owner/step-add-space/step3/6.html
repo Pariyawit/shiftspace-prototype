@@ -1,0 +1,33 @@
+<h2>ข้อห้ามและเงื่อนไขการใช้พื้นที่อื่นๆ</h2>
+
+			<div class="can-toggle">
+			  <input id="rule1" type="checkbox" ng-model="space.rule.rule1">
+			  <label for="rule1">
+			    <div class="can-toggle__label-text">อนุญาตสัตว์เลี้ยงเข้าพื้นที่</div>
+			    <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
+			  </label>
+			</div>
+
+			<div class="can-toggle">
+			  <input id="rule2" type="checkbox" ng-model="space.rule.rule2">
+			  <label for="rule2">
+			    <div class="can-toggle__label-text">อนุญาตสูบบุหรี่</div>
+			    <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
+			  </label>
+			</div>
+
+			<div class="can-toggle">
+			  <input id="rule3" type="checkbox" ng-model="space.rule.rule3">
+			  <label for="rule3">
+			    <div class="can-toggle__label-text">อนุญาตพนักงานจากผู้เช่า</div>
+			    <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
+			  </label>
+			</div>
+
+			<div class="text-input short">
+				<input class="form-control" maxlength="99" placeholder="อื่นๆ" ng-model="space.rule.other"/>
+			</div>
+			
+			<script>
+				new Spinner('.spinner');
+			</script>

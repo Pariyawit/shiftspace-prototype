@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="49px" height="55px" viewBox="-0.006 -0.027 49 55" enable-background="new -0.006 -0.027 49 55"
+	 xml:space="preserve">
+<defs>
+</defs>
+<path fill="#FFFFFF" stroke="#35C0CA" stroke-width="2" stroke-miterlimit="10" d="M21.99,14.244c0,0.883-0.717,1.599-1.6,1.599H2.6
+	c-0.883,0-1.6-0.716-1.6-1.599V2.599C1,1.716,1.717,1,2.6,1h17.791c0.883,0,1.6,0.716,1.6,1.599V14.244z"/>
+<path fill="#FFFFFF" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M47.535,14.244c0,0.883-0.717,1.599-1.6,1.599
+	H28.145c-0.883,0-1.6-0.716-1.6-1.599V2.599c0-0.883,0.717-1.599,1.6-1.599h17.791c0.883,0,1.6,0.716,1.6,1.599V14.244z"/>
+<path fill="#FFFFFF" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M21.99,33.294c0,0.883-0.717,1.598-1.6,1.598H2.6
+	c-0.883,0-1.6-0.715-1.6-1.598V21.65c0-0.884,0.717-1.6,1.6-1.6h17.791c0.883,0,1.6,0.716,1.6,1.6V33.294z"/>
+<path fill="#FFFFFF" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M47.535,33.294c0,0.883-0.717,1.598-1.6,1.598
+	H28.145c-0.883,0-1.6-0.715-1.6-1.598V21.65c0-0.884,0.717-1.6,1.6-1.6h17.791c0.883,0,1.6,0.716,1.6,1.6V33.294z"/>
+<path fill="#FFFFFF" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M21.99,52.344c0,0.883-0.717,1.599-1.6,1.599H2.6
+	c-0.883,0-1.6-0.716-1.6-1.599V40.7c0-0.884,0.717-1.599,1.6-1.599h17.791c0.883,0,1.6,0.715,1.6,1.599V52.344z"/>
+<path fill="#FFFFFF" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M47.535,52.344c0,0.883-0.717,1.599-1.6,1.599
+	H28.145c-0.883,0-1.6-0.716-1.6-1.599V40.7c0-0.884,0.717-1.599,1.6-1.599h17.791c0.883,0,1.6,0.715,1.6,1.599V52.344z"/>
+</svg>

@@ -1,0 +1,25 @@
+<h2>จำนวนวันที่คุณให้ใช้พื้นที่
+</h2>
+
+<h4>ขั้นต่ำ :</h4>
+<div class="spinner spinnerday1">
+	<input type="text" class="form-control preview" value="7 วัน" data-suffix=" วัน">
+	<input type="hidden" id="booking-min" class="data" name="min" value="7"><!-- get data here -->
+	<button class="add"><i class="icon-add"></i></button>
+	<button class="minus"><i class="icon-minus"></i></button>
+</div>
+<!-- /.spinner -->
+
+<h4>สูงสุด :</h4>
+<div class="spinner spinnerday2">
+	<input type="text" class="form-control preview" value="30 วัน" data-suffix=" วัน">
+	<input type="hidden" id="booking-max" class="data" name="max" value="30"><!-- get data here -->
+	<button class="add"><i class="icon-add"></i></button>
+	<button class="minus"><i class="icon-minus"></i></button>
+</div>
+<!-- /.spinner -->
+<script>
+	new Spinner('.spinner.spinnerday1');
+	new Spinner('.spinner.spinnerday2');
+	// new Spinner('.spinner');
+</script>

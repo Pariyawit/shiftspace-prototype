@@ -1,0 +1,123 @@
+
+
+<div id="addSpaceModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <button type="button" class="close-up" data-dismiss="modal" aria-hidden="true"><img src="../../images/icon-close.png" alt=""></button>
+
+      <div class="modal-body">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="../../images/icon-close.png" alt=""></button> -->
+        <center>
+          <h3>เพิ่มสถานที่ปล่อยเช่า</h3>
+        </center>
+        <div class="row">
+          <div class="col-sm-12">
+
+            <!-- Begin Form -->
+            <form name="registerForm" ng-submit="AddSpace()">
+              <div class="head-seperator">
+                <h5>กรอกข้อมูลพื้นที่ของคุณ</h5>
+              </div>
+               
+              <div class="form-group" show-errors>
+                <label>ชื่อพื้นที่</label>
+                <input ng-model="register.name" name="name" type="text" class="form-control" required>
+              </div>
+              <div class="form-group" show-errors>
+                <label>ที่อยู่</label>
+                <input ng-model="register.address" name="address" type="text" class="form-control" required>
+              </div>
+
+              <div class="form-group" show-errors>
+                <label>คำอธิบายพื้นที่</label>
+                <textarea ng-model="register.description" name="description" rows="5" class="form-control" 
+                  placeholder="อธิบายบรรยากาศรอบๆ พื้นที่" required>                  
+                </textarea>
+              </div>
+
+              <div class="form-group" show-errors>
+                <label>สิ่งอำนวยความสะดวก</label>
+				        <input type="text" ng-model="register.amenities" name="rule" rows="4" class="form-control" required/>    
+              </div>
+              <div class="form-group" show-errors>
+                <label>เงื่อนไขการเช่าเพิ่มเติม</label>
+                <input type="text" ng-model="register.rule" name="rule" rows="4" class="form-control" required/>
+              </div>
+              <div class="form-group" show-errors>
+                <label>ค่าเช่าพื้นที่ต่อเดือน (บาท)</label>
+                <input ng-model="register.month" name="month" type="number" ng-pattern="onlyNumbers" class="form-control text-left" required>
+              </div>
+              
+              <br>
+              <div class="head-seperator">
+                <h5>ข้อมูลติดต่อ</h5>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group" show-errors>
+                    <label>ชื่อ</label>
+                    <input ng-model="register.firstname" name="firstname" type="text" class="form-control" required>
+                    </input>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group" show-errors>
+                    <label>นามสกุล</label>
+                    <input ng-model="register.lastname" name="lastname" type="text" class="form-control" required>
+                    </input>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group" show-errors>
+                    <label>เบอร์ติดต่อ </label>
+                    <input ng-model="register.tel" name="tel" type="tel" class="form-control" required>
+                    </input>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group" show-errors>
+                    <label>อีเมล์</label>
+                    <input ng-model="register.email" name="email" type="email" class="form-control" required>
+                    </input>
+                  </div>
+                </div>
+              </div>
+              <div class="head-seperator">
+                <h5>อัพโหลดรูปภาพพื้นที่</h5>
+              </div>                
+                <div class="file-upload-form form-group">
+                  <center>
+                    <button type="button" class="form-control btn btn-primary" ng-click="uploadFiles()">อัพโหลดรูป</button>
+                    </center>
+                     <center>* ขนาดรูปที่เหมาะสมคือ 1200 x 800 Pixel หรือใหญ่กว่า</center>
+                     <br>
+                      <br>Files:
+                      <ul>
+                          <li ng-repeat="picture in register.pictures" style="font:smaller">
+                              {{picture.caption}}
+                          </li>
+                      </ul>
+                </div>
+
+              <br>
+               <button type="submit" ng-click="AddSpace(registerForm.$valid)" style="width:135px;margin-bottom:15px;" class="btn btn-primary">ส่งข้อมูล</button>               
+               <button type="submit" data-dismiss="modal"  style="width:135px;margin-bottom:15px;" class="btn btn-inverse">ยกเลิก</button>
+              <br>
+
+            </form>
+
+            <!-- End Form -->
+            <br>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include src="'views/shared/addspace-complete.html'"></div>

@@ -1,0 +1,8 @@
+<h2>ข้อมูลลูกค้า</h2>
+<h4>ยอดซื้อต่อบิล :</h4>
+<ul class="radio-group">
+	<li ng-repeat="(key, value) in Payment">
+		<input type="radio" id="radio{{key}}" name="radio" ng-value="key" ng-model="space.customer.payment">
+		<label for="radio{{key}}">{{value}}</label>
+	</li>
+</ul>

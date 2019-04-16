@@ -1,0 +1,73 @@
+.error-text{
+	font-size: 18px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #A00;
+}
+@media (max-width: 768px) {
+	.error-text{
+		margin : 0;
+		border-top: 1px solid;
+	    border-bottom: 1px solid;
+	}
+}
+
+
+#page-name-mobile{
+	display: none;
+}
+@media (max-width: 768px){
+	#page-name-mobile{
+		display: block;
+	}
+}
+
+div.select-wrapper.error a, div.select-wrapper.error div.chosen-drop, div.select-wrapper.error select{
+	border: 1px solid #AA0000;
+}
+
+textarea.error{
+	border: 1px solid #AA0000;
+}
+
+input.error, textarea.error{
+	border: 1px solid #AA0000;	
+}
+
+#map.error{
+	border: 1px solid #A00;
+}
+
+.centerMarker{
+  position:absolute;
+  /*url of the marker*/
+  background:url('/../form/img/icon_map.svg') no-repeat;
+  /*center the marker*/
+  top:50%;left:50%;
+
+  z-index:1;
+  /*fix offset when needed*/
+  margin-left:-10px;
+  margin-top:-34px;
+  /*size of the image*/
+  height:44px;
+  width:35px;
+  cursor:pointer;
+}
+.slider-wrapper .ui-slider-horizontal .ui-slider-handle {
+
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    top: -12px;
+}
+@media (max-width: 768px) {
+	.slider-wrapper .slider {
+	    margin: 30px 20px;
+	}
+}
+.checkbox-group {
+    margin: 30px 0 0 20px;
+    padding: 0;
+}

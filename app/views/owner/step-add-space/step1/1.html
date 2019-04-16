@@ -1,0 +1,26 @@
+<h2>พื้นที่ของคุณคือ</h2>
+<ul class="radio-group">
+	<!-- <li ng-repeat="type in StoreType">
+		<input type="radio" id="radio{{type.id}}" name="radio" value="{{type.id}}" ng-model="space.type" ng-change='changeSubType()' ng-click="scrollToBottom()">
+		<label for="radio{{type.id}}">{{type.name}}</label>
+	</li> -->
+	<!-- ng-repeat="(key, value) in Aminity" -->
+	<li ng-repeat="(key, value) in StoreType">
+		<input type="radio" id="radio-{{key}}" name="radio" ng-value="key" ng-model="space.type" ng-change='changeType()'>
+		<label for="radio-{{key}}">{{value.name}}</label>
+	</li>
+</ul>
+<!-- /.radio-group -->
+<h4 ng-if="space.type && space.type!=99 && space.type != 4" >ประเภท {{StoreType[space.type].name}} ของคุณ</h4>
+<!-- <select name="" id="" class="chosen-select" ng-model="space.subtype"> -->
+<div class="select-wrapper input-subtype" ng-class="{'error' : subtypeError == true}" ng-if="space.type != 4">
+	<select name="" id="" style="vertical-align: top;" class="chosen-select-no-search" ng-model="space.subType" ng-repeat="(keyType, Type) in StoreType" ng-if="keyType==space.type && space.type!=99" ng-change='changeSubType()'>
+		<option value="" disabled>กรุณาเลือก</option>
+		<option ng-value="key" ng-repeat="(key, value) in Type.subType">{{value}}</option>
+	</select>
+</div>
+
+<div class="form-group input-subtype" ng-if="space.type == 99 || space.subType == 99" style="max-width:320px" >
+  <label for="name">โปรดระบุ</label>
+  <input type="text" class="form-control" id="name" placeholder="" ng-model="space.subtypeOther" ng-class="{'error' : subtypeError == true}">
+</div>

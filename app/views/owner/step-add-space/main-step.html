@@ -1,0 +1,58 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1 col-lg-4 col-sm-8">
+			<h1>เพิ่มพื้นที่คุณกับ Shiftspace ใน 3 ขั้นตอน</h1>
+
+			<h4>ขั้นตอนที่ 1:</h4>
+			<h3 class="inline-block">ข้อมูลพื้นที่</h3>
+			<img ng-if="step1done" class="pull-right inline-block" style="margin-right:30px;" src="images/owner/checked.png" alt="">
+			<h5>ประเภท , ขนาด , ที่ตั้ง</h5>
+			<!-- <a href="">แก้ไข</a> -->
+			<br>
+
+			<hr><h4>ขั้นตอนที่ 2:</h4>
+			<h3 class="inline-block">จุดเด่นพื้นที่</h3>
+			<img ng-if="step2done" class="pull-right inline-block" style="margin-right:30px;" src="images/owner/checked.png" alt="">
+			<h5>รูปภาพ ,บริเวณใกล้เคียง,ข้อมูลลูกค้า</h5>
+			<div ng-if="step2done">
+				<!-- <a href="">แก้ไข</a> -->
+			</div>
+			<div ng-if="!step2done">
+				<button class="btn btn-primary" ng-click="go('addspace/step2')">ใส่ข้อมูลต่อ</button>
+			</div>
+			<br>
+
+			<hr><h4>ขั้นตอนที่ 3:</h4>
+			<h3 class="inline-block">จุดแบ่งพื้นที่กับ Shiftspace</h3>
+			<img ng-if="step3done" class="pull-right inline-block" style="margin-right:30px;" src="images/owner/checked.png" alt="">
+			<h5>การใช้พื้นที่, ช่วงเวลา, ตั้งราคา</h5>
+			
+			<div ng-if="step2done">
+				<div ng-if="step3done">
+					<!-- <a href="">แก้ไข</a> -->
+				</div>
+				<div ng-if="!step3done">
+					<button class="btn btn-primary" ng-click="go('addspace/step3')">ใส่ข้อมูลต่อ</button>
+				</div>
+				<br>
+			<hr>
+			<br>
+			</div>
+			<div ng-if="step1done && step2done && step3done">
+						<h3>เยี่ยมมาก! พื้นที่คุณพร้อมเปิดรับโอกาสใหม่ๆ จากแบรนด์แล้ว</h3>
+						<h5>เราจะรีบดำเนินการตรวจสอบข้อมูลการแบ่งพื้นที่ของคุณให้เร็วที่สุด หลังจากนั้น
+			เราจะส่งอีเมล์อนุมัติให้แก่คุณ พร้อมกับแสดงข้อมูลพื้นที่ของคุณให้โลกได้เห็น</h5>
+						<br>
+						<button class="btn btn-primary" ng-click="Preview()">ดูตัวอย่าง</button>
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<!-- </div> -->
+		</div>
+	</div>
+</div>
+
+<!-- <div ng-include src="'views/shared/footer.html'"></div> -->

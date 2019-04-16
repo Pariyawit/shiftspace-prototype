@@ -1,0 +1,26 @@
+
+
+<h2>สิ่งอำนวยความสะดวกเพื่อรองรับผู้ใช้พื้นที่</h2>
+<span style="font-size:16px; margin-top:-24px;">(เลือกได้มากกว่า 1 ข้อ)</span>
+<ul class="checkbox-group">
+	<li ng-repeat="(key, value) in Aminity">
+		<input type="checkbox" id="am{{key}}" name="checkbox" checklist-value="key" checklist-model="space.aminity">
+		<label for="am{{key}}"><span></span>{{value}}</label>
+	</li>
+<!-- </ul> -->
+<!-- /.checkbox-group --><!-- 
+<div class="text-input short">
+	<input class="form-control" maxlength="99" placeholder="อื่นๆ" ng-model="space.aminityOther" />
+</div>
+<br><br> -->
+<!-- <h3>สถานที่อำนวยความสะดวก</h3> -->
+<!-- <ul class="checkbox-group"> -->
+	<li ng-repeat="(key,value) in Facility">
+		<input type="checkbox" id="fa{{key}}" name="checkbox" checklist-value="key" checklist-model="space.facility">
+		<label for="fa{{key}}"><span></span>{{value}}</label>
+	</li>
+</ul>
+<!-- /.checkbox-group -->
+<div class="text-input short">
+	<input class="form-control" maxlength="99" placeholder="อื่นๆ" ng-model="space.facilityOther"/>
+</div>

@@ -1,0 +1,31 @@
+<div>
+	<ng-include src="'views/shared/nav-menu.html'" scope="" onload=""></ng-include>
+
+	<div>
+		<div style="height:68px;"></div>
+		<div class="section cover" style="background-image:url('{{imgSrc}}')">
+			<img ng-src="{{imgSrc}}" alt="" class="cover-image img-responsive">
+			<span class="name">
+				<h1 class="pull-right">
+					{{title}}
+				</h1>
+			</span>
+		</div>
+	</div>
+	
+	<div class="section-space">
+		<div class="container">
+			<div style="height:80px"></div>
+			<div class="row">
+				<div ng-include src="'views/shared/store-list.html'"></div>
+			</div>
+			<div class="row" ng-if="spaceType == 3">
+				<center><h1>ยังไม่มีร้านค้าในประเภทนี้</h1></center><br>
+				<center><button class="btn btn-primary"><h4 style="margin-top:0;color:#fff;">มาเปลี่ยนพื้นที่ให้เป็นเงินกับเรา</h4></button></center>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div ng-include src="'views/shared/footer.html'"></div>

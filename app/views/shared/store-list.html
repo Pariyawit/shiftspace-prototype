@@ -1,0 +1,30 @@
+<div class="col-md-4 col-sm-6 col-xs-12 store-thumbnail" ng-repeat="store in stores" ng-controller="StoreListCtrl">
+	<a ng-href="/#/space/{{store.id}}">
+	<center>
+		<div class="thumbnail store">
+			<!-- <img src="../../images/type-1-thumbnail-gray.jpg" alt=""> -->
+			<div class="img-wrapper">
+				<img ng-src="../../images/innovator/{{store.id}}/thumbnail.jpg" alt="">								
+
+				</img>
+				<div class="accent-overlay">
+					
+				<img class="icon-view" ng-src="../../images/icon-view.png" alt="">										
+				</div>
+			</div>
+			<div class="caption" id="cap-{{$index}}">
+				<div class="row">	
+					<div class="col-xs-8 text-left">
+						<h4>{{ store.name }}</h4>
+						<h5 class="text-black-2">{{ store.address }}</h5>
+					</div>
+					<div class="col-xs-4 pull-right text-right">
+						<h3 class="text-accent">{{ store.price | number}}</h3>
+						<h5 class="text-black-2">บาท/วัน</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+	</a>
+</div>

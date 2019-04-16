@@ -1,0 +1,48 @@
+<h2>ข้อมูลลักษณะลูกค้า</h2>
+<div class="slider-wrapper" id="gender">
+	<header>
+		<h4>เพศ :</h4>
+		<p>ชาย <span class="min">50</span>% / หญิง <span class="women">{{ 100 - space.customer.sex}}</span>%</p>
+	</header>
+	<input type="hidden" class="min-val" name="gender-min" value="50">
+	<div class="slider"></div>
+	<p class="pull-left slider-label">ชาย</p>
+	<p class="pull-right slider-label">หญิง</p>
+</div>
+<!-- /.slider-wrapper -->
+
+<div class="slider-wrapper" id="age">
+	<header>
+		<h4>อายุ :</h4>
+		<p><span class="min">20</span> - <span class="max">30</span> ปี</p>
+	</header>
+	<input type="hidden" class="min-val" name="age-min" value="20">
+	<input type="hidden" class="max-val" name="age-max" value="30">
+	<div class="slider"></div>
+	<p class="pull-left slider-label">10 ปี</p>
+	<p class="pull-right slider-label">80 ปี</p>
+</div>
+<!-- /#content-flex-wrapper -->
+<link rel="stylesheet" href="form/css/jquery-ui.structure.css">
+<script src="form/js/jquery-ui-spinner-slider.js"></script>
+<script src="form/js/jquery.ui.touch-punch.min.js"></script>
+<script>
+
+	new Slider('gender', false, 0, 100, 5);
+	new Slider('age', true, 10, 80, 5);
+	$(function(){
+		var men = $('#gender .min');
+		var women = $('#gender .women');
+		console.log(men);
+		
+		document.addEventListener()
+
+		men.change(function(){
+			console.log("X");
+			var women = $('#gender .women');
+			var men_val = men.html();
+			women.html(100 - men_val);
+		});
+	});
+
+</script>

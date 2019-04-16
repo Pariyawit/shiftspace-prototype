@@ -1,0 +1,19 @@
+<h2>การใช้พื้นที่สำหรับ</h2>
+<ul class="radio-group">
+	<li ng-repeat="(key, value) in PurposeOfUse">
+		<input type="radio" id="radio-{{key}}" name="radio" ng-value="key" ng-model="space.purposeOfUse" >
+		<label for="radio-{{key}}">{{value}}</label>
+	</li>
+
+</ul>
+<h2>พื้นที่นี้เหมาะสำหรับ</h2>
+<ul class="checkbox-group">
+	<li ng-repeat="(key, value) in SuitableFor">
+		<input type="checkbox" id="SuitableFor{{key}}" name="checkbox" checklist-value="key" checklist-model="space.suitableFor">
+		<label for="SuitableFor{{key}}"><span></span>{{value}}</label>
+	</li>
+</ul>
+<div class="form-group" style="max-width:320px" >
+  <label for="name">อื่นๆ</label>
+  <input type="text" class="form-control" id="name" placeholder="" ng-model="space.suitableForOther">
+</div>

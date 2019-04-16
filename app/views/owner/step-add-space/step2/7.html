@@ -1,0 +1,13 @@
+<h2>ข้อมูลลูกค้า</h2>
+<ul class="checkbox-group">
+	<li ng-repeat="(key, value) in Demographic">
+		<input type="checkbox" id="demographic{{key}}" name="checkbox" checklist-value="key" checklist-model="space.customer.demographic">
+		<label for="demographic{{key}}"><span></span>{{value}}</label>
+	</li>
+</ul>
+<!-- /.checkbox-group -->
+<div class="text-input short">
+	<input class="form-control" maxlength="99" placeholder="อื่นๆ" ng-model="space.customer.demographicOther" />
+</div>
+	<!-- /.CONTENT -->
+</div>

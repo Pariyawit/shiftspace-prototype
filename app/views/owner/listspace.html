@@ -1,0 +1,136 @@
+<div id="listspace" >
+	<ng-include src="'views/owner/nav-menu-listspace.html'" scope="" onload=""></ng-include>
+	<div>
+	<div style="height:68px;"></div>
+	
+	<div class="section banner">
+			<!-- <center> -->
+		<div class="banner-wrapper">
+			<img src="./images/owner/banner.jpg" alt="" class="bg">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h1>แบ่งพื้นที่</h1>
+					<h3>เพื่อสร้างรายได้ผ่าน ShiftSpace</h3>
+					<p>แบ่งพื้นที่บางส่วนภายในพื้นที่ของคุณ เพื่อเพิ่มรายได้<br>
+						เพิ่มฐานลูกค้า และช่วยลดภาระค่าเช่าพื้นที่</p>
+				</div>
+				<div class="col-md-4 col-md-offset-2">
+					<div class="panel panel-default register">
+					  <div class="panel-body">
+					    <h4>
+					    	<img class="svg" src="./icon/pin-blue.svg" style="width:21px;height:23px;" alt="v">&nbsp;ลงทะเบียนเพื่อแบ่งพื้นที่
+					    </h4>
+					    <!-- <div style="height:45px"></div> -->
+					    <form>
+					    	<div class="input-group">
+						    	<input type="text" placeholder="ชื่อ-นามสกุล" class="form-control" ng-model="owner.name" required>
+
+						    	<input type="tel" placeholder="เบอร์ติดต่อ" class="form-control" ng-model="owner.tel" required>
+
+						    	<input type="email" placeholder="อีเมล์" class="form-control" ng-model="owner.email" required>
+
+						    	<!-- <input type="text" placeholder="รหัสผ่าน" class="form-control"> -->
+						    	<!-- <input type="text" placeholder="รหัสผ่าน (พิมพ์อีกครั้ง)" class="form-control"> -->
+					    	</div>
+<!-- <div style="height:45px"></div> -->
+							<div style="font-size:16px;color:#A00;text-align:center;margin:5px" ng-if="isError">{{ errorMessage}}</div>
+					    	<button class="btn btn-primary sharp full-width" ng-click="RegisterOwner()">ลงทะเบียน</button>
+					    </form>
+
+						<div class="divider" style="line-height: 40px;font-size:14px;">
+							<hr class="left"/>
+								หรือ
+							<hr class="right"/>
+						</div>
+
+						<p>
+							ลงทะเบียนผ่าน <a href="#">Facebook</a>
+						</p>
+
+
+
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="section register-step">
+		<div class="container">
+			<div class="row">
+				<h3>4 ขั้นตอนง่ายๆ เพื่อทำเงิน</h3>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="thumbnail">
+								<div class="image">
+									<img src="./icon/picture&detail.svg" alt="">
+								</div>
+								<div class="content">
+									อัพโหลด รูปภาพ ข้อมูลปล่อยเช่า<br>
+									ข้อมูลผู้บริโภคบริเวณนั้น
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="thumbnail">
+								<div class="image">
+									<img src="./icon/selected.svg" alt="">									
+								</div>
+								<div class="content">
+									รอผู้เช่า โดยผู้เช่าจะส่งรายละเอียด<br>
+									ขอเช่าเข้ามา เพื่อให้คุณเลือก
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="thumbnail">
+								<div class="image">									
+									<img src="./icon/appear.svg" alt="">
+								</div>
+								<div class="content">
+									ผู้เช่านำสินค้าเข้ามาวาง<br>
+									ภายในร้านของคุณ									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="thumbnail">
+								<div class="image">									
+									<img src="./icon/income.svg" alt="">
+								</div>
+								<div class="content">
+									รับเงินจากผู้เช่าพื้นที่ มีรายได้เพิ่ม<br>
+									ลูกค้ามากขึ้น และช่วยค่าเช่าร้าน									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section shift-ur-space">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-push-6">
+					<h3>สร้างรายได้ โดยใช้พื้นที่ของคุณเอง</h3>
+					<p>ShiftSpace เป็นเว็บไซต์ที่ช่วยให้คุณได้ใช้พื้นที่ให้เกิดประโยชน์สูงสุด โดยการแบ่งพื้นที่ภายในร้านของคุณ ไม่ว่าจะเป็นร้านเสื้อผ้า ร้านอาหาร 
+คาเฟ่ โฮสเทล ฯลฯ โดยเว็บไซต์จะช่วยหาเจ้าของแบรนด์ที่เหมาะสมกับพื้นที่ของคุณ  
+</p>
+					<h4>รายได้เพิ่ม ไม่ต้องลงทุน ไม่มีค่าสมัคร ไม่มีข้อผูกมัด แค่มีร้านของคุณเอง ก็เริ่มได้เลย!</h4>
+				</div>
+				<div class="col-md-5 col-md-pull-6">
+					<img src="./images/owner/ownershop.jpg" alt="" class="img-responsive" style="width:100%">	
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+<div ng-include src="'views/shared/backtotop.html'"></div>
+<div ng-include src="'views/shared/footer.html'"></div>
+<!-- <div ng-include src="'views/modal/popup.html'"></div> -->

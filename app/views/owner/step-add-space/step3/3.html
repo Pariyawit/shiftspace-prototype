@@ -1,0 +1,52 @@
+<h2>คำอธิบายลักษณะของจุดแบ่งพื้นที่</h2>
+<div class="text-input count-text">
+	<textarea class="form-control" rows="5" cols="30" maxlength="200" placeholder="พื้นที่ประมาณ 2x2 ฟุต บริเวณเคาร์เตอร์คิดเงินเพื่อวางสินค้าได้ เป็นจุดที่คนเดินผ่านมากที่สุดของร้าน เพราะเป็นจุดที่ลูกค้าจะต้องจ่ายเงิน" ng-model="space.spaceDescription" 
+	ng-class="{'error' : spaceDescriptionError == true}"></textarea>
+	<div class="counter">200</div>
+</div>
+
+<div ng-if="Images">
+<h4>เลื่อนเพื่อเลือกรูปภาพจุดที่ต้องการแบ่ง :</h4>
+<div class="flexslider store-pic">
+  <ul class="slides">
+  	<li ng-repeat="Img in Images" data-img="Img.caption">
+  		<img src="{{Img.url}}" alt="">
+  	</li>
+  </ul>
+</div>
+</div>
+<!-- <script src="form/js/jquery-1.12.4.min.js"></script> -->
+<div ng-if="Images">
+
+  <script src="form/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+  $(window).on('load',function() {
+    	var picInput = $('#pic');
+      $('.flexslider').flexslider({
+      	animation: 'slide',
+      	slideshow: false,
+      	smoothHeight: true,
+      	controlNav: false,
+      	after: function(e){
+      		var val = e.slides[e.currentSlide].getAttribute('data-img');
+      		picInput.val(val);
+      	}
+      });
+    });
+  setTimeout(loadSlider, 200);
+  function loadSlider(){
+  	var picInput = $('#pic');
+      $('.flexslider').flexslider({
+      	animation: 'slide',
+      	slideshow: false,
+      	smoothHeight: true,
+      	controlNav: false,
+      	after: function(e){
+      		var val = e.slides[e.currentSlide].getAttribute('data-img');
+      		picInput.val(val);
+      	}
+      });
+  }
+
+  </script>
+</div>

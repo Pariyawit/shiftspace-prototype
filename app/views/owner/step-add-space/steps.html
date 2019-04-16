@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="form/css/style.css">
+<link rel="stylesheet" href="form/css/error.css">
+<div class="form-container" id="stepaddspace" ng-cloak>
+	<div class="wrapper">
+		<div class="header-wrapper">
+			<div id="header">
+				<div id="logo">
+					<a href="#">
+						<img src="form/img/img_logo.png" width="186" height="auto" alt="ShiftSpace">
+					</a>
+				</div>
+				<div class="pull-right" id="page-name-mobile">
+					<p style="font-size: 16px;font-weight: 200;color: #4a4f50;line-height: 34px; margin: 0;">{{stepHeader}}</p>
+				</div>
+				<div id="page-name">
+					<p>ขั้นตอนที่ {{stepHeader}}</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!-- /#header -->
+			<ul class="loader">
+				<li ng-class="{'active' : substep-1 >= $index}" ng-repeat="i in getNumber(maxStep) track by $index">
+			</ul>
+			<!-- /.loader -->
+		</div>
+		<!-- /#header -->
+		<!-- <div ng-include="showStep"></div> -->
+		<div id="content-flex-wrapper">
+			<div class="content-wrapper">
+				<div class="content-container">
+					<div ng-repeat="stepView in Steps track by $index">
+						<!-- <div ng-show="$index+1 == substep" ng-include="stepView.form" ng-init="init()"></div> -->
+						<div ng-show="$index+1 == substep" ng-include="stepView.form" ng-init="init()"></div>
+					</div>
+				</div>
+			</div>
+			<div class="helper" id="helper-content" style="position:fixed; right:0; height:100vh;">
+				<div class="helper-box">
+					<div class="icon"><img src="form/img/icon_bulb.png" width="25" height="auto" alt=""></div>
+
+					<div ng-repeat="stepView in Steps track by $index">
+						<div ng-show="$index+1 == substep" ng-include="stepView.helper"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-buttons">
+			<button class="help-button">
+				<img src="form/img/icon_bulb.png" width="25" height="auto" alt="">
+			</button>
+			<div ng-if="isError" class="error-text">กรุณากรอกข้อมูลให้ครบถ้วน</div>
+			<a href="" class="btn-transparent back-button" ng-click="Back(substep)" ng-if="substep!=1">กลับ</a>
+			<button type="submit" class="btn-submit submit-button" ng-if="requireForm" ng-click="Next(substep)">ต่อไป</button>
+			<button type="submit" class="btn-light submit-button" ng-if="!requireForm" ng-click="Next(substep)">ข้ามไปก่อน</button>
+		</div>
+
+		<div class="overlay">
+			<div class="close-area"></div>
+			<div class="helper-container"></div>
+			<button class="close-button"><i class="glyphicon glyphicon-remove"></i></button>
+		</div>
+		<!-- 
+		<script src="form/js/jquery-1.12.4.min.js"></script>
+	 -->
+		<script src="form/js/jquery-3.1.1.min.js"></script>
+		<script src="form/js/chosen.jquery.min.js"></script>
+		<script src="form/js/script.js"></script>
+	</div>
+</div>

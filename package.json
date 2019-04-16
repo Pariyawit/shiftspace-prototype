@@ -1,0 +1,27 @@
+{
+  "name": "shiftspace",
+  "version": "1.0.0",
+  "description": "space sharing © 2016 Shift Space Co.,LTD.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pariyawit/shiftspace.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/Pariyawit/shiftspace/issues"
+  },
+  "homepage": "https://github.com/Pariyawit/shiftspace.git#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "filepicker-js": "^2.4.17"
+  }
+}

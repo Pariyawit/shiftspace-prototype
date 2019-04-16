@@ -1,0 +1,23 @@
+<h2>เพิ่มส่วนลด เมื่อมีระยะเวลาการจองยาวขึ้น</h2>
+
+<h4>รายสัปดาห์ :</h4>
+<div class="spinner spinner-week">
+	<input type="text" class="form-control preview" value="0% off" data-suffix="% off">
+	<input type="hidden" id="price-discount-week" class="data" name="weekly" value="0"><!-- get data here -->
+	<button class="add"><i class="icon-add"></i></button>
+	<button class="minus"><i class="icon-minus"></i></button>
+</div>
+<!-- /.spinner -->
+
+<h4>รายเดือน :</h4>
+<div class="spinner spinner-month">
+	<input type="text" class="form-control preview" value="0% off" data-suffix="% off">
+	<input type="hidden" id="price-discount-month" class="data" name="monthly" value="0"><!-- get data here -->
+	<button class="add"><i class="icon-add"></i></button>
+	<button class="minus"><i class="icon-minus"></i></button>
+</div>
+<!-- /.spinner -->
+<script>
+	new Spinner('.spinner.spinner-week');
+	new Spinner('.spinner.spinner-month');
+</script>

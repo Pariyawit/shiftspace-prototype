@@ -1,0 +1,18 @@
+<h2>โชว์รูปพื้นที่ให้กับเจ้าของแบรนด์ได้พิจารณา</h2>
+<!-- learn how to use at http://www.dropzonejs.com/ -->
+
+<!-- <form action="fileupload.php" class="dropzone" id="fileupload1"> -->
+<form action="fileupload.php" class="dropzone" id="fileupload1" ng-click="uploadFiles()">
+
+	<div id="guideline">
+		<p><span class="btn-submit">อัพโหลดรูป</span></p>
+		<p class="note text-center">* ขนาดรูปที่เหมาะสมคือ 1200 x 800 Pixel หรือใหญ่กว่า</p>
+		<br>
+          <br>Files:
+          <ul>
+              <li ng-repeat="picture in space.image" style="font:smaller">
+                  {{picture.caption}}
+              </li>
+          </ul>
+	</div>
+</form>

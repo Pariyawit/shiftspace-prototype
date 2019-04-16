@@ -1,0 +1,130 @@
+<div style="background-color: #dcdfe0;">
+	<ng-include src="'views/shared/nav-menu.html'" scope="" onload=""></ng-include>
+
+	<div>
+		<div style="height:68px;"></div>
+		<div class="section cover" style="background-image:url('../../images/innovator/{{store.id}}/cover.jpg')">
+			<img ng-src="../../images/innovator/{{store.id}}/cover.jpg" alt="" class="cover-image img-responsive">
+		</div>
+	</div>
+
+	<div class="container store-information">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default info-panel">
+						  <div class="panel-body">
+						    <h1 style="margin-top: 0;">{{ store.name }}</h1>
+						        <h5 style="color: #4a4f50;">{{store.address}}</h5>
+								<hr style="    margin-top: 32px;
+    margin-bottom: 25px;">
+
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="panel panel-default detail-panel">
+										  <div class="panel-heading">ประเภทร้านค้า</div>
+										  <div class="panel-body">
+										    <p>{{store.storeType}}</p>
+										  </div>
+										</div>
+
+									</div>
+
+									<div class="col-sm-6">
+										<div class="panel panel-default detail-panel">
+										  <div class="panel-heading">ประเภทการปล่อยเช่า</div>
+										  <div class="panel-body">
+										    <p>{{store.rentType}}</p>
+										  </div>
+									</div>
+								</div>
+
+								</div>
+
+
+							      <br>
+							<h5>คำอธิบายพื้นที่</h5>
+							<p>{{store.description}} </p>
+
+
+							<hr>
+
+							<h5>สิ่งอำนวยความสะดวก</h5>
+							<div class="row" id="box-select" style="margin-left: -6px;margin-right: -6px;">
+			                  <div class="col-xs-4" ng-repeat="am in store.amenities">
+			                    <label>
+			                      <input type="radio"><span style="padding-top:25px;">{{am}}</span>
+			                    </label>
+			                  </div>
+			                </div>
+							
+							<hr>
+
+							<h5>เงื่อนไขการเช่าเพิ่มเติม</h5>
+							<p>
+								{{ store.rule }}
+							</p>
+
+						  </div> <!-- end panel body -->
+							
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="panel panel-default info-panel">
+							<div class="panel-body">
+							  	
+								<h5>รูปภาพ</h5>
+
+								<simple-image-gallery images="images"></simple-image-gallery>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="panel panel-default info-panel">
+							<div class="panel-body" style="padding:0">							  	
+								<h5 style="margin-top: 30px;
+    margin-left: 30px;">แผนที่</h5>
+								<ng-map center="{{store.position}}" zoom="16">
+								  <marker position="{{store.position}}" title="{{store.name}}"></marker>
+								</ng-map>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-12 col-xs-12">
+			<div class="pull-right panel panel-default enquiry-panel">
+			  <div class="panel-heading" style="line-height:77px;">
+			   	<span class="pull-left" style="font-size:18px;margin-top: -5px;"><span style="font-size:36px">{{ store.price | number}}</span> บาท</span>
+			   	<span class="pull-right" style="font-size:18px;">ราคา/วัน</span>
+			  </div>
+			  <div class="panel-body">
+			  	<div class="row">
+			  		<div class="col-md-12 col-sm-12">
+					    <button class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#sendEnquiry" style="width:100%;height:50px;font-size: 26px;">ขอเช่าพื้นที่</button>
+					    <br>
+
+					    <h5 style="color:#4a4f50;color: #4a4f50;
+								    margin-top: 40px;
+								    margin-bottom: 12px;
+								    font-weight: 400;">ขั้นตอนการจอง</h5>
+					    <p style="font-weight:400;color:#a4a7a7">
+					    	1. ส่งคำขอของคุณมาให้เรา  <br>
+							2. ทางพื้นที่จะพิจารณาคำขอของคุณ <br>
+							3. เราจะติดต่อคุณกลับไป
+					    </p>
+					  </div>
+				  </div>				
+			  </div> <!-- end panel body -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div style="height:32px"></div>
+
+<div ng-include src="'views/shared/backtotop.html'"></div>
+<div ng-include src="'views/shared/footer.html'"></div>
+<div ng-include src="'views/modal/enquiry-form.html'"></div>

@@ -1,0 +1,57 @@
+<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation" style="width:260px;">
+  <!-- <a class="navmenu-brand" href="#">Brand</a> -->
+  <a style="margin-left:24px;" ng-click="go('/listspace')"><img src="./images/plus.png" alt=""> เพิ่มพื้นที่ปล่อยเช่า</a>
+  <hr>
+  <div style="position:absolute; bottom: 0;">
+    <br style="line-height: 50px;">
+      <p style="margin-left:24px;">
+        <a style="color:#FFF;font-size:16px;" href="mailto:contact@shiftspace.me">
+          <img src="./images/icon-mail.png" alt="">&nbsp;contact@shiftspace.me
+        </a>
+      </p>
+      <p style="margin-left:24px;">
+        <a style="color:#FFF;font-size:16px;" href="tel:089-764-7726">
+          <img src="./images/icon-phone.png" alt="">&nbsp;089-764-7726
+        </a>
+      </p>
+
+    <br>
+
+        <a  style="margin-left:24px;" href="https://www.facebook.com/theshiftspace"><img class="social" src="./images/icon-social-facebook.png" alt="" target="_blank"></a> &nbsp;&nbsp;
+
+        <a href="https://www.instagram.com/theshiftspace"><img class="social" src="./images/icon-social-instagram.png" alt="" target="_blank"></a> &nbsp;&nbsp;
+
+        <a href="https://twitter.com/the_shiftspace"><img class="social" src="./images/icon-social-twitter.png" alt="" target="_blank"></a> &nbsp;&nbsp;
+
+        <!-- <img class="social" src="./images/icon-social-youtube.png" alt="" target="_blank">-->
+
+        <a href="https://www.pinterest.com/theshiftspace"><img class="social" src="./images/icon-social-pinterest.png" alt="" target="_blank"></a> &nbsp;&nbsp;
+        <hr style="opacity:0.5">
+        <span style="margin-left:24px;color:#FFF;font-size:12px;">© Copyright 2016 Shift Space Co., Ltd.</span> 
+        <br>
+        <br>
+  <!-- </div> -->
+  </div>
+</nav>
+
+<nav class="navbar navbar-inverse" id="menu-home">
+    <div class="navbar-header" style="padding-left:32px;padding-right:32px;">
+      <!-- <button type="button" id="shift-toggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> -->
+       <button type="button" id="shift-toggle" class="navbar-toggle collapsed" data-toggle="offcanvas" data-canvas="body" data-target="#myNavmenu" data-placement="right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#"><img src="images/logo.png" style="height:55px"></a> -->
+      <a ng-click="go('/')"><img src="images/logo-transparent.png" id="logo" style="height:37px;margin-top: 13px;"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li><a><button class="btn btn-primary" ng-click="go('/listspace')"><img src="./icon/pin.svg" style="width:18px;height:20px;" alt=""> เพิ่มพื้นที่ปล่อยเช่า</button></a></li>
+         <li><a><button class="btn btn-white" data-toggle="modal"><img src="./icon/human.svg" style="width:18px;height:20px;" alt=""> เข้าสู่ระบบ</button></a></li>
+        <!-- <li><a ng-click="ChangeLanguage()">Eng</a></li> -->
+      </ul>
+    </div>
+</nav>
+<ng-include src="'views/shared/addspace-form.html'" scope="" onload=""></ng-include>

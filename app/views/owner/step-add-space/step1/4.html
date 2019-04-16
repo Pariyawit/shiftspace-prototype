@@ -1,0 +1,142 @@
+<h2>กำหนดตำแหน่งที่ตั้ง</h2>
+<div id="map"></div>
+<p>ลากหมุดแผนที่กำหนดตำแหน่งที่ตั้งให้ถูกต้อง</p>
+<!-- change type to type="hidden" -->
+<input type="text" id="latitude" name="latitude" ng-model="space.gps.x" style="display:none">
+<input type="text" id="longitude" name="longitude" ng-model="space.gps.y" style="display:none">
+<!-- <input id="autocomplete" placeholder="Enter your address" type="text"></input> -->
+
+<div class="form-group" style="max-width:320px" >
+  <!-- <label for="name">โปรดระบุ</label> -->
+  <!-- <input id="autocomplete" class="form-control" placeholder="Search address" type="text"></input> -->
+  <!-- <input type="text" class="form-control" id="name" placeholder="" ng-model="space.subtypeOther" ng-class="{'error' : subtypeError == true}"> -->
+</div>
+
+<div ng-if="substep == 4">
+	 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCu6Q48Tjluf0oyt5Pq-iudj6nay0nvjB0"></script>
+<script >
+	initialize();
+	function initialize() {
+		var myLatLng = {lat: 13.7468245, lng: 100.5331226};
+
+		var mapOptions = {
+		  zoom: 14,
+		  center: myLatLng,
+		  mapTypeControl: false,
+			streetViewControl: false,
+		  // mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById('map'),mapOptions);
+		// var autocomplete = new google.maps.places.Autocomplete(
+		//     (document.getElementById('autocomplete')), {
+		//         types: ['geocode']
+		//     });
+		$('<div/>').addClass('centerMarker').appendTo(map.getDiv())
+			 //do something onclick
+			.click(function(){
+			   var that=$(this);
+			   if(!that.data('win')){
+				// that.data('win',new google.maps.InfoWindow({content:'this is the center'}));
+				that.data('win').bindTo('position',map,'center');
+			   }
+			   that.data('win').open(map);
+			});
+		google.maps.event.addListener(map, 'center_changed', function() {
+			// console.log("change");
+			// 0.1 seconds after the center of the map has changed,
+			// set back the marker position.
+			window.setTimeout(function() {
+			  var center = map.getCenter();
+			  // marker.setPosition(center);
+			  var currentLat = center.lat();
+			  var currentLng = center.lng();
+			  $('#latitude').val(currentLat);
+			  $('#longitude').val(currentLng);
+			}, 100);
+		 });
+		google.maps.event.addListener(autocomplete, 'place_changed', function() {
+	      var place = autocomplete.getPlace();
+	      var lat = place.geometry.location.lat();
+    	  var lng = place.geometry.location.lng();
+    	  console.log(lat);
+    	  console.log(lng);
+    	  map.setCenter(place.geometry.location);
+	  	});
+
+
+	  }
+
+	  // google.maps.event.addDomListener(window, 'load', initialize);
+
+
+</script>
+
+</div>
+<!-- 
+<script>
+initMap();
+function initMap() {
+	var myLatLng = {lat: 13.7468245, lng: 100.5331226};
+
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 11,
+		center: myLatLng,
+		mapTypeControl: false,
+		streetViewControl: false,
+		rotateControl: true
+	});
+
+	var marker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		// icon: 'form/img/icon_map.png',
+		icon: 'form/img/pin-blue2.svg',
+		// draggable:true,
+		draggable:false,
+	});
+
+	google.maps.event.addListener(marker, 'dragend', function(marker){
+		var latLng = marker.latLng; 
+		currentLatitude = latLng.lat();
+		currentLongitude = latLng.lng();
+		$('#latitude').val(currentLatitude);
+		$('#longitude').val(currentLongitude);
+	});
+}
+</script>
+ -->
+<!-- 
+<script type="text/javascript">
+initialize() 
+	function initialize() {
+		var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+			var mapOptions = {
+			  center: myLatlng,
+			  zoom: 8
+			};
+
+		var map = new google.maps.Map(document.getElementById("map"),
+			mapOptions);
+
+		var marker = new google.maps.Marker({
+			  position: myLatlng,
+			  map: map,
+			  title: 'Hello World!'
+		});
+
+		google.maps.event.addListener(map, 'center_changed', function() {
+			// 0.1 seconds after the center of the map has changed,
+			// set back the marker position.
+			// window.setTimeout(function() {
+			//   var center = map.getCenter();
+			//   marker.setPosition(center);
+			// }, 100);
+			var center = map.getCenter();
+			  marker.setPosition(center);
+		});
+	}
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+ -->
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo2PB8810chkZ1i1DtpQK1A9Gfzi3ADms&callback=initMap"></script> -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo2PB8810chkZ1i1DtpQK1A9Gfzi3ADms&callback=initMap"></script> -->
